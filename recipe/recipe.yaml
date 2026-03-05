@@ -1,5 +1,5 @@
 context:
-  version: 2602.0.2
+  version: 2603.0.0
 
 package:
   name: py-oidc-auth-client
@@ -7,7 +7,7 @@ package:
 
 source:
 - url: https://pypi.org/packages/source/p/py-oidc-auth-client/py_oidc_auth_client-${{ version }}.tar.gz
-  sha256: 6b46384587197595ae1b83b0b0760e694bcaf16197c95bd584eb0c36e0cb913f
+  sha256: b10aae81ca45f976241b2789c4fb9d509f5cb57f1e19ca2d0c60f6dc4e867dfd
 
 build:
   number: 0
