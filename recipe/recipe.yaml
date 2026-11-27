@@ -1,21 +1,24 @@
+schema_version: 1
+
 context:
-  version: "2603.0.1"
+  version: "2611.0.0"
+  build_number: "0"
 
 package:
   name: py-oidc-auth-client
   version: ${{ version }}
 
 source:
-  - url: https://pypi.org/packages/source/p/py-oidc-auth-client/py_oidc_auth_client-${{ version }}.tar.gz
-    sha256: 85971187e8ca268e402a27d27d6c02f44f74a8765e68c54b6dafa3dbca7ea97a
+  url: https://files.pythonhosted.org/packages/source/p/py-oidc-auth-client/py_oidc_auth_client-${{ version }}.tar.gz
+  sha256: e8849e6cc309a4778df202cc7b8e72f54bb37dde0cad3b7d6983e740663cc696
 
 build:
-  number: 0
+  number: ${{ build_number }}
+  noarch: python
   script: ${{ PYTHON }} -m pip install . --no-deps -vv
   python:
     entry_points:
       - oidc-auth = py_oidc_auth_client.__main__:main
-  noarch: python
 
 requirements:
   host:
